@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/papuga.css">  
     
+<!--    js scripts     -->
+
+
     <title>Papuga</title>
 </head> 
-<body>
+<body onscroll = 'scrollFunction()'>
     <div class = 'intro'>
        
         <div>
@@ -36,7 +39,7 @@
     
     <div class = 'screen-two'>
         <div class = 'mobile-view'></div>
-        <div class = 'logo'></div>
+        <div id = 'bm' class = 'logo' onclick = "animateLogo()"></div> 
         <div class = 'icons'></div>
     </div>
     
@@ -52,6 +55,9 @@
         </div>
     </div>
     
+
+    <script src="js/bodymovin.js"></script>
+    <script src="js/papuga.js"></script> 
 </body>
 
 <footer>
