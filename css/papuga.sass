@@ -104,11 +104,22 @@ body
         grid-row: 1 /span 2 
         margin-right: 5px  
     
-    .logo
-        background-color: none  
+    .logo-container             
         grid-column: 2
         grid-row: 2  
         margin-left: 5px
+        position: relative 
+        box-sizing: border-box 
+        overflow: hidden   
+          
+        .logo   
+            position: absolute
+            width: 100% 
+            height: 100%  
+            top: 0    
+            box-sizing: border-box  
+ 
+        
         
     .icons
         background-color: $offWhite
