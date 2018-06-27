@@ -5,6 +5,9 @@ let innerWidth = window.innerWidth
 let logo = document.querySelector('#bm');
 let played = false;
 let palette = document.getElementsByClassName('palette');
+let logoContainer = document.querySelector('.logo-container');
+let background = document.querySelector('.img-container');
+console.log(background);
 
 function animatePalette(){
     
@@ -20,15 +23,24 @@ function animatePalette(){
 function animateLogo(){
     
     if(played === false){
+        
+        background.classList.add('fade-in');
+        
+           
             let animation = bodymovin.loadAnimation({
             container: logo,
             renderer: 'svg',
             loop: false,
             autoplay: true,
-            path: 'js/data.json'
+            path: 'js/bird.json'
         })
+            
+        setTimeout(function(){
+            logoContainer.classList.add('color-in');
+            background.classList.remove('fade-in');
+        }, 1700);   
         
-       played = true;
+        played = true;  
         
     }
     
