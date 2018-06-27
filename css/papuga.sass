@@ -13,6 +13,7 @@ $blue: rgba(21, 87, 136, 1)
 $darkBlue: rgba(11, 69, 109, 1)
 
 $red: rgba(214, 57, 52, 1) 
+$yellow: rgba(233, 219, 66, 1)      
 $mediaSmall: '(max-width: 699px)'
 $mediaLarge: '(min-width: 700px)'
 
@@ -28,6 +29,7 @@ body
         margin-top: 5px
         margin-bottom: 5px
         position: relative  
+    
         
 .display
     position: absolute   
@@ -45,6 +47,7 @@ body
     box-sizing: border-box 
     height: 100%
     width: 100%
+    min-width: 900px             
     position: relative
     display: flex 
     justify-content: space-between 
@@ -66,8 +69,11 @@ body
         h1
             font-size: 2rem 
             font-weight: bold
-            margin-top: 10px 
-            font-family: $titleFont 
+            margin-top: 30px 
+            font-family: $titleFont
+            position: relative
+            width: 100%
+            text-align: right   
         
         h2
             display: block
@@ -78,9 +84,62 @@ body
             line-height: 1.2rem      
             
         p
-            margin-top: 30px  
-            line-height: 1.2rem   
-  
+            margin-top: 35px                  
+            line-height: 1.2rem  
+            
+    .palette-container 
+        position: static            
+        height: 10px     
+        width: 100px                      
+        margin: 0
+        padding: 0   
+        box-sizing: border-box
+        float: right  
+        margin-right: 235px           
+        
+        
+          
+        
+    .container-two
+        height: 100%
+        width: 100%
+        display: flex  
+        overflow: hidden    
+        
+    
+    .palette
+        position: static  
+        height: 100% 
+        margin: 0
+        padding: 0
+        box-sizing: border-box
+                
+        
+        
+    .white
+        background-color: $white
+        transform: translateX(-110%)
+        
+    .blue
+        background-color: $blue
+        transform: translateX(-210%)  
+    
+    .dark-blue
+        background-color: $darkBlue
+        transform: translateX(-310%)  
+        
+    .yellow
+        background-color: $yellow
+        transform: translateX(-410%)  
+        
+    .red
+        background-color: $red
+        transform: translateX(-510%)     
+
+    .color-in       
+        transform: translateX(0)
+        box-shadow: .5px .5px 1px 1px rgba(0, 0, 0, .5)              
+        transition: .3s cubic-bezier(0.0, 0.0, 0.2, 1) all .4s        
     
 .screen-one
     height: 100%

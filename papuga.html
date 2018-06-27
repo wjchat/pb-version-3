@@ -10,15 +10,25 @@
     <link rel="stylesheet" href="css/papuga.css">  
     
 <!--    js scripts     -->
+<!--jquery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
     <title>Papuga</title>
 </head> 
-<body onscroll = 'scrollFunction()'>
+<body onscroll = 'scrollFunction()' onload="colorPalette()">
     <div class = 'intro'>
        
         <div>
-            <img src="" alt="Color Palette">
+            <div class = 'palette-container'>
+               <div class = 'container-two'>  
+                <div class = 'palette white'></div>
+                <div class = 'palette blue'></div>
+                <div class = 'palette dark-blue'></div>
+                <div class = 'palette yellow'></div>
+                <div class = 'palette red'></div>
+               </div>
+            </div>
             <h1>Papuga Transportation</h1>
         
         
@@ -62,7 +72,7 @@
     
 
     <script src="js/bodymovin.js"></script>
-    <script src="js/papuga.js"></script> 
+    <script src="js/papuga.js"></script>   
 </body>
 
 <footer>
