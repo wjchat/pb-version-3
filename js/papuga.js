@@ -52,7 +52,7 @@ function scrollFunction(){
     if (played === false){
         
         let logoPos = logo.getBoundingClientRect();     
-        if (logoPos.top < innerHeight){
+        if (logoPos.top < innerHeight - 100){
             animateLogo();
         }
     }
