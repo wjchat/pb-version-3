@@ -7,7 +7,6 @@ let played = false;
 let palette = document.getElementsByClassName('palette');
 let logoContainer = document.querySelector('.logo-container');
 let background = document.querySelector('.img-container');
-console.log(background);
 
 function animatePalette(){
     

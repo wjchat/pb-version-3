@@ -45,7 +45,7 @@ body {
       font-size: 2rem;
       font-weight: bold;
       margin-top: 30px;
-      font-family: "Kohinoor Devangari Semibold";
+      font-family: helvetica;
       position: relative;
       width: 100%;
       text-align: right; }
@@ -53,7 +53,7 @@ body {
       display: block;
       position: absolute;
       text-align: right;
-      bottom: 0;
+      bottom: -25px;
       right: 0;
       line-height: 1.2rem; }
     .intro div p {
