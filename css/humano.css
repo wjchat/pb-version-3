@@ -1,80 +1,26 @@
+.palette-container {
+  margin-left: -8px; }
+
 .intro {
-  box-sizing: border-box;
+  margin-bottom: 10%; }
+  .intro .content h1 {
+    text-align: left; }
+  .intro .content p {
+    margin-left: 550px; }
+  .intro .content .label {
+    left: 0px; }
+
+.portrait {
   height: 100%;
   width: 100%;
-  min-width: 900px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 4%;
-  padding-right: 4%; }
-  .intro div {
+  margin-top: 5%;
+  margin-bottom: 5%; }
+  .portrait img {
+    width: 90%;
+    height: auto;
+    display: block;
     position: relative;
-    display: inline-block;
-    height: 55%;
-    width: 44%;
-    top: 20%;
-    box-sizing: border-box;
-    font-family: "Kohinoor Devangari Regular"; }
-    .intro div img {
-      height: 20px; }
-    .intro div h1 {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-top: 30px;
-      font-family: helvetica;
-      position: relative;
-      width: 100%;
-      text-align: right; }
-    .intro div h2 {
-      display: block;
-      position: absolute;
-      text-align: right;
-      bottom: 0;
-      right: 0;
-      line-height: 1.2rem; }
-    .intro div p {
-      margin-top: 35px;
-      line-height: 1.4rem; }
-  .intro .palette-container {
-    position: static;
-    height: 10px;
-    width: 100px;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    float: right;
-    margin-right: 235px; }
-  .intro .container-two {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    overflow: hidden; }
-  .intro .palette {
-    position: static;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; }
-  .intro .white {
-    background-color: #e6e7e8;
-    transform: translateX(-110%); }
-  .intro .blue {
-    background-color: #155788;
-    transform: translateX(-210%); }
-  .intro .dark-blue {
-    background-color: #0b456d;
-    transform: translateX(-310%); }
-  .intro .yellow {
-    background-color: #e9db42;
-    transform: translateX(-410%); }
-  .intro .red {
-    background-color: #d63934;
-    transform: translateX(-510%); }
-  .intro .color-in {
-    transform: translateX(0);
-    box-shadow: 0.5px 0.5px 1px 1px rgba(0, 0, 0, 0.5);
-    transition: 0.3s cubic-bezier(0, 0, 0.2, 1) all 0.4s; }
+    margin: auto; }
 
 .main {
   width: 90%;
@@ -84,29 +30,88 @@
   margin-right: auto;
   height: 160%; }
 
-.view-one {
-  top: 10%;
-  height: 150%;
+.space {
+  height: 200%; }
+
+.view-space {
+  top: 25%;
+  height: 120%;
   width: 90%;
   position: relative;
   display: block;
   margin-left: auto;
-  margin-right: auto; }
-  .view-one img {
+  margin-right: auto;
+  margin-bottom: 20%;
+  margin-top: 10%; }
+
+.view-one img {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  left: 35%;
+  top: 15%; }
+  .view-one img:nth-of-type(2) {
+    left: 5%;
+    top: 60%;
+    z-index: -5;
+    width: 50%; }
+.view-one div {
+  position: absolute;
+  width: 25%;
+  height: auto;
+  text-align: left;
+  left: 70%;
+  top: 80%;
+  text-align: left;
+  min-width: 300px; }
+  .view-one div p {
+    height: 100%;
+    width: 100%; }
+
+.view-two img {
+  position: absolute;
+  width: 35%;
+  height: auto;
+  left: 5%;
+  top: 10%; }
+  .view-two img:nth-of-type(2) {
+    left: 35%;
+    top: 65%;
+    z-index: -5;
+    width: 60%; }
+
+.view-three {
+  height: 200%;
+  margin-bottom: 0; }
+  .view-three img {
     position: absolute;
-    width: 50%;
     height: auto;
-    left: 25%; }
-    .view-one img:nth-of-type(2) {
-      left: 5%;
+    width: 20%;
+    left: 5%;
+    width: 60%;
+    top: 15%; }
+    .view-three img:nth-of-type(2) {
+      left: 50%;
+      width: 45%;
       top: 40%;
-      z-index: -5; }
-    .view-one img:nth-of-type(3) {
-      left: 10%;
-      z-index: -6;
-      top: 30%; }
-    .view-one img:nth-of-type(4) {
-      left: 0%;
-      top: 80%; }
+      z-index: 5; }
+    .view-three img:nth-of-type(3) {
+      left: 5%;
+      width: 70%;
+      top: 50%; }
+
+footer {
+  margin-top: 20%; }
+
+/* transitions & animations */
+.move {
+  opacity: 0; }
+
+.show {
+  opacity: 1;
+  transition: 0.3s linear opacity 0s, 0.35s linear top 0s, 0.35s linear left 0s, 0.35s linear width 0s; }
+
+.bigPic {
+  opacity: 0; }
 
 /*# sourceMappingURL=humano.css.map */

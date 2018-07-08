@@ -19,10 +19,8 @@ $mediaLarge: '(min-width: 700px)'
 
 body
     box-sizing: border-box
-    position: relative 
-    padding-left: 10px
-    padding-right: 10px  
-    min-width: 700px
+    position: relative
+    min-width: 1000px
     min-height: 500px     
     
     div
@@ -33,113 +31,101 @@ body
         
 .display
     position: absolute   
-    display: block  
-    max-width: 95%    
-    max-height: 95%  
+    display: block   
     top: 0
     bottom: 0
     left: 0
     right: 0
-    margin: auto 
+    margin: auto
   
 
 .intro
-    box-sizing: border-box 
-    height: 100%
     width: 100%
-    min-width: 900px             
-    position: relative
-    display: flex 
-    justify-content: space-between 
-    padding-left: 4%         
-    padding-right: 4%     
+    min-height: 100%
+    position: static
+    margin-bottom: 15%
     
-    div
-        position: relative
-        display: inline-block
-        height: 55%     
-        width: 44%         
-        top: 20% 
-        box-sizing: border-box
-        font-family: $bodyFont    
-          
-        img
-            height: 20px  
+    .content
+        position: absolute
+        height: auto
+        top: 15%
+        right: 100px
+        left: 100px
+        font-size: 1rem
+        font-family: helvetica
+        font-weight: light
+       
         
         h1
-            font-size: 2rem 
+            font-size: 34px
             font-weight: bold
-            margin-top: 30px 
-            font-family: helvetica   
+            font-family: helvetica
+            width: 400px
+            text-align: right
             position: relative
-            width: 100%
-            text-align: right   
-        
-        h2
-            display: block
+            letter-spacing: 1px
+            
+        .label
             position: absolute
-            text-align: right 
-            bottom: -25px   
-            right: 0 
-            line-height: 1.2rem     
+            width: 300px
+            text-align: right
+            bottom: 0
+            left: 100px
+            line-height: 1.6rem
+            font-size: 1.2rem
+            
             
         p
-            margin-top: 35px                  
-            line-height: 1.4rem       
+            position: relative
+            margin-left: 500px
+            margin-top: -30px
             
-    .palette-container 
-        position: static            
-        height: 10px     
-        width: 100px                      
-        margin: 0
-        padding: 0   
-        box-sizing: border-box
-        float: right  
-        margin-right: 235px           
-        
-        
-          
-        
-    .container-two
-        height: 100%
-        width: 100%
-        display: flex  
-        overflow: hidden    
-        
-    
-    .palette
-        position: static  
-        height: 100% 
-        margin: 0
-        padding: 0
-        box-sizing: border-box
-                
-        
-        
-    .white
-        background-color: $white
-        transform: translateX(-110%)
-        
-    .blue
-        background-color: $blue
-        transform: translateX(-210%)  
-    
-    .dark-blue
-        background-color: $darkBlue
-        transform: translateX(-310%)  
-        
-    .yellow
-        background-color: $yellow
-        transform: translateX(-410%)  
-        
-    .red
-        background-color: $red
-        transform: translateX(-510%)     
+        .palette-container
+            width: 120px
+            height: 15px
+            position: relative
+            left: 12px
 
-    .color-in       
-        transform: translateX(0)
-        box-shadow: .5px .5px 1px 1px rgba(0, 0, 0, .5)              
-        transition: .3s cubic-bezier(0.0, 0.0, 0.2, 1) all .4s        
+            .container-two
+                height: 100%
+                width: 100%
+                display: flex  
+                overflow: hidden    
+
+                .palette
+                    position: static  
+                    height: 100% 
+                    width: 20%
+                    margin: 0
+                    padding: 0
+                    box-sizing: border-box
+                    cursor: pointer
+
+                .white
+                    background-color: $white
+                    transform: translateX(-110%)
+
+                .blue
+                    background-color: $blue
+                    transform: translateX(-210%) 
+
+                .dark-blue
+                    background-color: $darkBlue
+                    transform: translateX(-310%)  
+
+                .yellow
+                    background-color: $yellow
+                    transform: translateX(-410%)  
+
+                .red
+                    background-color: $red
+                    transform: translateX(-510%)     
+
+                .color-in       
+                    transform: translateX(0)
+                    box-shadow: .5px .5px 1px 1px rgba(0, 0, 0, .5)          
+                    transition: .3s cubic-bezier(0.0, 0.0, 0.2, 1) all .4s       
+            
     
 .screen-one
     height: 100%
@@ -277,9 +263,7 @@ body
         position: relative
         top: 20%
         
-        p
-            font-family: $bodyFont   
-            line-height: 1.4rem    
+        p   
             position: relative   
             top: 20% 
     
@@ -289,7 +273,7 @@ body
     
 
 footer  
-    position: relative
+    position: static 
     box-sizing: border-box
     width: 100%
     height: 50px 
@@ -298,11 +282,29 @@ footer
         display: block
         float: right
         font-family: garamond 
+        padding-right: 1%
         
         
-    
+/* transitions */
+.display
+    opacity: 0
+    transform: translateY(40px)
+    max-height: 90%
+    max-width: 90%
 
+.show
+    max-height: 95%
+    max-width: 95%
+    opacity: 1
+    transform: translateY(0px)
+    transition: .4s linear opacity 0s, .3s linear transform 0s, .3s linear max-width 0s, .3s linear max-height 0s
 
+p
+    font-weight: light
+    line-height: 1.6rem
+    font-size: 1.1rem
+    font-family: helvetica
+        
 
 
 
