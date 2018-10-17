@@ -100,7 +100,7 @@ function lineOut(thing) {
     thing.querySelector('.line').classList.remove('draw-line');
 }
 function redirect(){
-    window.location = "/home.html";
+    window.location = "home.html";
 }
 enter.onmouseover = function(){
     lineThru(enter);
