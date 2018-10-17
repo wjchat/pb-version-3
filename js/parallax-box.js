@@ -1,6 +1,8 @@
 //this code lets you move images along the y axis at different rates as you scroll up and down the page
 //give this function to body onscroll
-const body = document.querySelector('body');
+//provides enter animation as well
+const body = document.querySelector('body'); 
+const home = document.querySelector('#home');
 let images = document.getElementsByTagName('img');
 let views = document.getElementsByClassName('view-space');
 let grown = false;
@@ -63,7 +65,7 @@ function growItems(current) {
     let left = current.offsetLeft;
     let top = current.offsetTop;
 
-    current.style.top = (top / 1.05) + 'px';
+//    current.style.top = (top / 1.05) + 'px';
     current.style.left = (left / 1.025) + 'px';
     current.style.width = (width / .95) + 'px';
 
@@ -75,8 +77,19 @@ function fadeBig(current){
 }
 
 body.onload = function () {
-    colorPalette();
+    TweenMax.to(body, .3, {
+        opacity: 1,
+        onComplete: colorPalette,
+    })
     setItems();
+}
+home.onclick = function(){
+    TweenMax.to(body, .3, {
+        opacity: 0,
+        onComplete: function(){
+            window.location = '/home.html';
+        }
+    })
 }
 
 //todo- remove grown class on screen resize

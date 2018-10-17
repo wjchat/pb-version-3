@@ -1,7 +1,7 @@
 let innerHeight = window.innerHeight
 let innerWidth = window.innerWidth
-
-
+const papBody = document.querySelector('#papBody');
+const back = document.querySelector('t');
 let logo = document.querySelector('#bm');
 let played = false;
 let palette = document.getElementsByClassName('palette');
@@ -9,8 +9,8 @@ let logoContainer = document.querySelector('.logo-container');
 let background = document.querySelector('.img-container');
 let imagesPap = document.getElementsByClassName('display');
 
+//function is fired in parallax-box.js
 function animatePalette() {
-
     let animation = bodymovin.loadAnimation({
         container: palette,
         renderer: 'svg',
@@ -73,3 +73,23 @@ function colorPalette() {
     }
 
 };
+ 
+papBody.onscroll = function(){
+    scrollFunction();
+}
+papBody.onload = function () {
+    TweenMax.to(papBody, .3, {
+        opacity: 1,
+        onComplete: colorPalette,
+    })
+}
+
+back.onclick = function(){
+    TweenMax.to(papBody, .3, {
+        opacity: 0,
+        onComplete: function(){
+            window.location = '/home.html';
+        }
+    })
+}
+

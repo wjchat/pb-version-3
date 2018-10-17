@@ -1,0 +1,162 @@
+body{
+    opacity: 0;
+}
+.prettyboi{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    width: 60%;
+    height: auto;
+}
+
+.title{
+    margin-top: 7%;
+    font-size: 2rem;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: "NowAltBlack";
+    line-height: 2.5rem;
+}
+span{
+    color: cadetblue;
+    cursor: pointer;
+    border-bottom: 1px solid cadetblue;
+    width: 0;
+    -webkit-transition: .1s ease-in-out 0s;
+    transition: .1s ease-in-out 0s;
+    position: relative;
+    top: 3rem;
+    font-size: 3rem;
+}
+
+span:hover{
+    border-bottom: 10px solid cadetblue;
+}
+a{
+    text-decoration: none;
+}
+
+h2{
+    font-family: 'NowAltBlack';
+    text-align: center;
+    margin-top: 34%;
+    font-size: 3rem;
+}
+
+ul{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    top: 30px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul > li{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    height: 40%;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+ul > li > img{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+ul > li > h1{
+    position: relative;
+    z-index: 10;
+    font-size: 2rem;
+    width: 100%;
+    text-align: center;
+    top: 40%;
+    opacity: 0;
+    font-family: 'NowAltRegular';
+    pointer-events: none;
+}
+#rb{
+    color: white;
+}
+.email{
+    position: relative;
+    top: 60%;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 100px;
+    font-family: 'NowAltBlack';
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+.email > pink{
+    color: rgb(255,182,193);
+}
+#mobile{
+    display: none;
+}
+
+@media (max-width: 500px){
+    .title{
+        margin-top: 30%;
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+    span{
+        font-size: 2.5rem;
+        line-height: 3.3rem;
+    }
+    h2{
+        margin-top: 60%;
+    }
+    ul{
+        padding-top: 0%;
+        height: 60%
+    }
+    ul > li{
+        height: 20%;
+        text-align: center;
+        pointer-events: none;
+    }
+    ul > li > img{
+        display: none;
+    }
+    ul > li > h1{
+        width: auto;
+        display: inline-block;
+        opacity: 1;
+        border-bottom: solid rgb(255,182,193) 9px;     
+    }
+    #mobile{
+        display: block;
+        font-family: "NowAltRegular";
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 4% 0;
+    }
+    #rb{
+        color: black
+    }
+    .email{
+        top: 0;
+    }
+}

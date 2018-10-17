@@ -1,4 +1,5 @@
 let container = document.querySelector('.container');
+let body = document.querySelector('body');
 
 container.width = window.innerWidth
 container.height = window.innerHeight
@@ -98,11 +99,23 @@ function lineThru(thing) {
 function lineOut(thing) {
     thing.querySelector('.line').classList.remove('draw-line');
 }
-
+function redirect(){
+    window.location = "/home.html";
+}
 enter.onmouseover = function(){
     lineThru(enter);
 }
 
 enter.onmouseout = function(){
     lineOut(enter);
+}
+enter.onclick = function(){
+    TweenMax.to(body, .3,{
+        opacity: 0,
+        onComplete: redirect,
+    })
+}
+
+body.onload = function(){
+    makeObjects();
 }

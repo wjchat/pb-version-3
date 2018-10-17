@@ -22,7 +22,7 @@
     display: block; }
 
 .enter {
-  height: 10%;
+  height: 3.1rem;
   bottom: 15%;
   position: absolute;
   left: 0;
@@ -32,6 +32,12 @@
   z-index: 10;
   background-color: rgba(0, 0, 0, 0);
   text-align: center; }
+  @media (max-width: 790px) {
+    .enter {
+      height: 2.1rem; } }
+  @media (max-width: 570px) {
+    .enter {
+      height: 1rem; } }
   .enter h1 {
     height: 100%;
     font-size: 3rem;
@@ -39,26 +45,27 @@
     font-family: "NowAltBlack";
     font-weight: bold;
     position: relative;
+    color: lightpink;
     display: inline-block;
     cursor: pointer;
     text-align: center; }
     @media (max-width: 790px) {
       .enter h1 {
-        font-size: 2rem; } }
+        font-size: 2.5rem; } }
     @media (max-width: 570px) {
       .enter h1 {
-        font-size: 1rem; } }
+        font-size: 2rem; } }
     .enter h1 .line {
       width: 0%;
-      height: 1rem;
-      background-color: black;
+      height: 30%;
+      background-color: lightpink;
       position: absolute;
-      bottom: 2.2rem;
+      bottom: 45%;
       pointer-events: none;
       display: block;
-      transition: 0.5s all cubic-bezier(0.4, 0, 0.2, 1) 0s; }
+      transition: 0.1s all cubic-bezier(0.4, 0, 0.2, 1) 0s; }
     .enter h1 .draw-line {
       width: 100%;
-      transition: 0.3s all cubic-bezier(0.4, 0, 0.2, 1) 0s; }
+      transition: 0.2s all cubic-bezier(0.4, 0, 0.2, 1) 0s; }
 
 /*# sourceMappingURL=index.css.map */
