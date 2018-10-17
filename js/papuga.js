@@ -88,7 +88,7 @@ back.onclick = function(){
     TweenMax.to(papBody, .3, {
         opacity: 0,
         onComplete: function(){
-            window.location = '/home.html';
+            window.location = 'home.html';
         }
     })
 }

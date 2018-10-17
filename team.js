@@ -7,7 +7,7 @@ back.onclick = function(){
     TweenMax.to(body, .3, {
         opacity: 0,
         onComplete: function(){
-            window.location = '/home.html';
+            window.location = 'home.html';
         }
     })
 }
