@@ -19,7 +19,7 @@ const duration1 = .3;
 }
 
 function redirect(each){
-    let route = '/' + each.id + '.html';
+    let route = each.id + '.html';
     TweenMax.to(body, duration1, {
         opacity: 0,
         onComplete: function(){
